@@ -1,0 +1,10 @@
+import boto3 
+regions= ['ap-south-1']
+
+for region_name in regions:
+    #print(f'region_name: {region_name}')
+    ec2= boto3.resource('ec2', region_name=region_name)
+    instances= ec2.meta.client.describe_instances()
+    for instance in instances['Reservations']:
+        print(" Number of Instance in this Region :  " ,(len)(instance))
+        
