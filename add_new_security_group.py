@@ -27,7 +27,7 @@ try:
     response = ec2.create_security_group(GroupName=Group_name,
                                          Description=Description_Value,
                                          VpcId=vpc_id)
-    # 'SECURITY_GROUP_NAME', DESCRIPTION we can i
+    # 'SECURITY_GROUP_NAME', DESCRIPTION we can i 
     security_group_id = response['GroupId']
     print('Security Group Created %s in vpc %s.' % (security_group_id, vpc_id))
 
